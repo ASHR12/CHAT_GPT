@@ -34,6 +34,6 @@ form.addEventListener("submit", async (e) => {
   const chatbotResponse = response.data.choices[0].text;
 
   messages.innerHTML += `<div class="message bot-message">
- <img src="./icons/chatbot.png" alt="bot icon"> <span>${chatbotResponse}</span>
+  <img src="./icons/chatbot.png" alt="bot icon"> <span>${chatbotResponse}</span>
   </div>`;
 });
