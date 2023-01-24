@@ -1,0 +1,85 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f7efe5;
+}
+
+#chat-window {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #674188;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+#chat-messages {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  height: calc(100vh - 200px);
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+}
+
+#chat-form {
+  display: flex;
+  align-items: center;
+}
+
+#chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #f7efe5;
+  color: #674188;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.bot-message {
+  font-family: "Roboto", sans-serif;
+  background-color: #fffbf5; /* different light color */
+  text-align: justify; /* keep it right-aligned */
+  padding: 15px; /* added padding */
+  margin-top: 10px; /* added margin-top to create a gap */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+
+.user-message {
+  font-family: "Nunito", sans-serif;
+  background-color: #f7efe5; /* light color */
+  text-align: left; /* changed text align to left */
+  padding: 15px; /* added padding */
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+.user-message img,
+.bot-message img {
+  width: 40px; /* adjust the width of the icon */
+  height: 40px; /* adjust the height of the icon */
+  margin-right: 20px; /* add some margin to separate the icon from the message */
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 400px) {
+  #chat-window {
+    width: 90%;
+  }
+}
+.main-title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 0.5rem;
+  color: #fffbf5;
+  font-style: italic;
+}
