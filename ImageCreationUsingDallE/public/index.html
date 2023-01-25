@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Creation using DALL-E</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Image Creation using DALL-E</h1>
+    <div class="container">
+      <div class="loader hide">
+        <div class="loading"></div>
+      </div>
+      <div class="left-col">
+        <form id="text-form">
+          <label class="promt-label" for="text-input"
+            >Enter text to generate image:</label
+          >
+          <textarea id="text-input" rows="5" cols="30" required></textarea>
+          <button type="submit">Create Image</button>
+        </form>
+      </div>
+      <div class="right-col">
+        <img id="image-frame" src="./default.jpg" />
+      </div>
+    </div>
+    <div class="error-msg"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
