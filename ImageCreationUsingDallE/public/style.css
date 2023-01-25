@@ -1,23 +1,33 @@
 body {
   background-color: #f5fffa;
 }
-.container {
-  display: flex;
-}
-
-.left-col,
-.right-col {
-  width: 50%;
-}
 
 h1 {
   text-align: center;
 }
 
-#text-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Mobile */
+
+.container {
+  display: grid;
+  gap: 1rem;
+}
+
+.left-col,
+.right-col {
+  width: 100%;
+}
+
+.left-col {
+  display: grid;
+  place-items: center;
+}
+
+#image-frame {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  max-width: 500px;
 }
 
 #text-input {
@@ -30,6 +40,14 @@ h1 {
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
   font-size: 18px;
   resize: none;
+  height: 100px;
+  max-width: 500px;
+}
+
+#text-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 button[type="submit"] {
@@ -42,26 +60,10 @@ button[type="submit"] {
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
   font-size: 18px;
 }
-.right-col {
-  display: flex;
-  justify-content: center;
-}
-#image-frame {
-  width: 70%;
-  height: 70%;
-  object-fit: contain;
-  padding-top: 30px;
-}
 
 label.promt-label {
   font-size: 1.5rem;
   color: #4caf50;
-}
-.error-msg p {
-  font-size: 1.5rem;
-  color: red;
-  text-align: center;
-  margin-top: 0px;
 }
 /* loading */
 @keyframes spinner {
@@ -92,16 +94,20 @@ label.promt-label {
 .loader.hide {
   display: none;
 }
-@media only screen and (max-width: 768px) {
-  .container {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-  }
-  .left-col,
-  .right-col {
-    width: 100%;
-  }
+.error-msg p {
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
+}
 
+/* above 768 px */
+@media only screen and (min-width: 768px) {
+  .error-msg p {
+    color: blue;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
   .left-col {
     order: 2;
   }
@@ -109,23 +115,7 @@ label.promt-label {
   .right-col {
     order: 1;
   }
-
   #text-input {
-    height: 100px;
-    max-width: 500px;
-  }
-  .right-col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #image-frame {
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
-    max-width: 500px;
-  }
-  .error-msg p {
-    margin-top: -12rem;
+    height: 300px;
   }
 }
