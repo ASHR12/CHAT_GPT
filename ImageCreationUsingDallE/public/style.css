@@ -102,9 +102,6 @@ label.promt-label {
 
 /* above 768 px */
 @media only screen and (min-width: 768px) {
-  .error-msg p {
-    color: blue;
-  }
   .container {
     grid-template-columns: 1fr 1fr;
   }

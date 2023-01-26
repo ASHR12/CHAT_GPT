@@ -1,7 +1,6 @@
 window.onload = function () {
   const errorDiv = document.querySelector(".error-msg");
   var loader = document.querySelector(".loader");
-  console.log(errorDiv);
   document
     .getElementById("text-form")
     .addEventListener("submit", function (event) {
