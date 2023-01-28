@@ -1,0 +1,37 @@
+intro: https://res.cloudinary.com/ashutosh-shrivastava/image/upload/v1674873596/space-game/intro_rlunsr.png
+background :- https://cdn.pixabay.com/photo/2016/09/08/12/00/stars-1654074_960_720.jpg
+spaceship:-https://res.cloudinary.com/ashutosh-shrivastava/image/upload/v1674873508/space-game/spaceship-png-icon-17267_tjl9jt.png
+bullet :- https://res.cloudinary.com/ashutosh-shrivastava/image/upload/v1674873628/space-game/bullet_kjvxhs.png
+enemy :- https://res.cloudinary.com/ashutosh-shrivastava/image/upload/v1674873628/space-game/enemy_c7xhyu.png
+
+
+
+
+#### Command
+
+
+use this image as background https://cdn.pixabay.com/photo/2016/09/08/12/00/stars-1654074_960_720.jpg  
+
+use this as intro image https://res.cloudinary.com/ashutosh-shrivastava/image/upload/v1674873596/space-game/intro_rlunsr.png
+center align it and remove this intro image after 2 sec
+
+Display this image as spaceship https://res.cloudinary.com/ashutosh-shrivastava/image/upload/v1674873508/space-game/spaceship-png-icon-17267_tjl9jt.png  make it small and place it at the bottom
+
+make spaceship image move left or right with mouse movement . keep "Y" constant and "X" = mouseX
+
+disable x scroll 
+
+when space bar key is pressed display this bullet image https://res.cloudinary.com/ashutosh-shrivastava/image/upload/v1674873628/space-game/bullet_kjvxhs.png at the spaceship location , make bullet size small and then move bullet image  from Y=0 to Y= max . make it look like spaceship is firing bullets.
+
+Use this as enemy image : https://res.cloudinary.com/ashutosh-shrivastava/image/upload/v1674873628/space-game/enemy_c7xhyu.png and create enemy every 4 sec location y=0 and x= random and move it down with speed 
+
+disable y scroll
+
+Add collision detection method for bullet and enemy , if enemy and bullet image overlap , then remove that enemy image and increase score by 1 
+
+collision is not defined
+
+Display score on left top side in white color with 2rem font size
+
+when enemy position is bottom=0 display game over
+
