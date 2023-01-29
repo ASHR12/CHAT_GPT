@@ -55,6 +55,14 @@
         document.body.ontouchmove = function (event) {
           spaceship.style.left = event.touches[0].clientX + "px";
         };
+        /* disable  double tap zoom in mobile . */
+        document.body.addEventListener(
+          "touchmove",
+          function (event) {
+            event.preventDefault();
+          },
+          { passive: false }
+        );
       });
     </script>
   </head>
