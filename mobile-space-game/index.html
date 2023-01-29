@@ -51,9 +51,10 @@
           }
         };
 
-        window.addEventListener("deviceorientation", function (event) {
-          spaceship.style.left = (event.gamma * window.innerWidth) / 90 + "px";
-        });
+        /* Make spaceship image move left or right on touch of the mobile screen */
+        document.body.ontouchmove = function (event) {
+          spaceship.style.left = event.touches[0].clientX + "px";
+        };
       });
     </script>
   </head>
