@@ -61,3 +61,14 @@ public class ReadExcelRowValues {
         }
     }
 }
+
+
+///
+Session session = resolver.adaptTo(Session.class);
+            Node assetNode = excelAsset.adaptTo(Node.class);
+            Node jcrContentNode = assetNode.getNode("jcr:content");
+            Node renditionsNode = jcrContentNode.getNode("renditions");
+            Node renditionNode = renditionsNode.getNode(originalRendition.getName());
+            renditionNode.setProperty("jcr:data", workbook.getBytes());
+
+            session.save();
