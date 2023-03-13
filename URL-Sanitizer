@@ -1,0 +1,13 @@
+public class URLSanitizer {
+    public static String sanitize(String url) {
+        StringBuilder sanitizedUrl = new StringBuilder();
+        for (char c : url.toCharArray()) {
+            if (c < 128) { // ASCII character
+                sanitizedUrl.append(c);
+            } else { // Non-ASCII character
+                sanitizedUrl.append(String.format("%%%02X", (int) c));
+            }
+        }
+        return sanitizedUrl.toString();
+    }
+}
