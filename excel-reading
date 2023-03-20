@@ -1,0 +1,9 @@
+// Update the binary data of the Excel asset
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            workbook.write(baos);
+            InputStream updatedInputStream = new ByteArrayInputStream(baos.toByteArray());
+            Asset updatedAsset = assetManager.createAsset(assetPath, updatedInputStream, originalRendition.getMimeType(), true);
+
+            // Remove the original asset and save the updated asset
+            excelAsset.remove();
+            updatedAsset.adaptTo(Node.class).getSession().save();

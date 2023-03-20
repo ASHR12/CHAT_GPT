@@ -1,0 +1,25 @@
+import java.net.URI;
+import java.net.URISyntaxException;
+
+public class URISanitizer {
+    public static String sanitize(String uri) throws URISyntaxException {
+        StringBuilder sanitizedUri = new StringBuilder();
+        for (char c : uri.toCharArray()) {
+            if (isUnreserved(c)) { // Unreserved character
+                sanitizedUri.append(c);
+            } else { // Reserved or illegal character
+                sanitizedUri.append(String.format("%%%02X", (int) c));
+            }
+        }
+        String result = sanitizedUri.toString();
+        new URI(result); // Validate the URI
+        return result;
+    }
+
+    private static boolean isUnreserved(char c) {
+        return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '-' || c == '.' || c == '_' || c == '~';
+    }
+}
+This code uses the isUnreserved method to check if a character is an unreserved character according to RFC 3986. If it is an unreserved character, it is appended to the sanitizedUri string. If it is not an unreserved character (i.e., it is a reserved or illegal character), its hexadecimal value is appended to the sanitizedUri string in percent-encoded format. After all characters have been processed, the resulting sanitized URI is validated using the URI class’s constructor.
+
+Is this what you were looking for?

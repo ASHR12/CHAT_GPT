@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Case Details</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			padding: 20px;
+			margin: 0;
+		}
+
+		.navbar {
+			background-color: #333;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			padding: 0 20px;
+		}
+
+		.logo {
+			color: #fff;
+			font-size: 24px;
+			font-weight: bold;
+			margin-right: auto;
+		}
+
+		.container {
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+			padding: 20px;
+			max-width: 600px;
+			margin: 80px auto 0;
+		}
+
+		h1 {
+			margin-top: 0;
+			font-size: 28px;
+			color: #333;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 3px;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar">
+		<div class="logo">Logo</div>
+	</nav>
+
+	<div class="container">
+		<h1>Case ID: 123456</h1>
+		<p>Message: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+		<button onclick="location.href='https://www.example.com';">Back to Main Site</button>
+	</div>
+</body>
+</html>
